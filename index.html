@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .section { margin-bottom: 30px; padding: 20px; border: 1px solid #ddd; border-radius: 5px; }
+        .section h3 { color: #333; }
+        input, button { margin: 5px; padding: 8px; }
+        button { background: #007bff; color: white; border: none; border-radius: 3px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+        .result { margin-top: 10px; padding: 10px; background: #f8f9fa; border-radius: 3px; }
+        .code { background: #f4f4f4; padding: 10px; border-radius: 3px; font-family: monospace; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <!-- Latihan Original -->
+    <div class="section">
+        <h3>🔹 Latihan Original (Tanpa Spread)</h3>
+        <input type="text" id="name_1" placeholder="Masukkan nama">
+        <button onclick="menampilkan()">Tampilkan</button>
+        <div class="result" id="tampilan_1"></div>
+    </div>
+
+    <!-- Latihan 2 Original -->
+    <div class="section">
+        <h3>🔹 Latihan 2 Original (Tanpa Spread)</h3>
+        <input type="text" id="name_2" placeholder="Nama">
+        <input type="text" id="nomor_2" placeholder="Nomor">
+        <input type="text" id="alamat_2" placeholder="Alamat">
+        <button onclick="menampilkan2()">Tampilkan</button>
+        <div class="result" id="tampilan_2"></div>
+    </div>
+
+    <!-- Latihan 3 Original -->
+    <div class="section">
+        <h3>🚀 Dengan Spread Operator - Update User Data</h3>
+        <p><strong>Konsep:</strong> Update data user tanpa mengubah data asli</p>
+        <input type="text" id="name_3" placeholder="Nama Baru">
+        <input type="text" id="nomor_3" placeholder="Nomor Baru">
+        <input type="text" id="alamat_3" placeholder="Alamat Baru">
+        <button onclick="updateUser()">Update User</button>
+        <div class="result" id="tampilan_3"></div>
+        <div class="code">
+            <strong>Kode yang dipakai:</strong><br>
+            const updatedUser = { ...originalUser, name: newName };
+        </div>
+    </div>
+
+    <!-- Latihan 4 Original -->
+    <div class="section">
+        <h3>🚀 Spread untuk Gabung Data</h3>
+        <p><strong>Konsep:</strong> Gabungkan data personal dengan data kontak</p>
+        <input type="text" id="hobby" placeholder="Hobi">
+        <input type="text" id="job" placeholder="Pekerjaan">
+        <button onclick="gabungData()">Gabung Data</button>
+        <div class="result" id="tampilan_4"></div>
+        <div class="code">
+            <strong>Kode yang dipakai:</strong><br>
+            const completeUser = { ...personalData, ...contactData };
+        </div>
+    </div>
+
+    <!-- Latihan 5 Original -->
+    <div class="section">
+        <h3>🚀 Spread untuk Array - Tambah Item Baru</h3>
+        <p><strong>Konsep:</strong> Tambah item ke list tanpa mengubah list asli</p>
+        <input type="text" id="newItem" placeholder="Item baru">
+        <button onclick="tambahItem()">Tambah Item</button>
+        <button onclick="resetList()">Reset List</button>
+        <div class="result" id="tampilan_5"></div>
+        <div class="code">
+            <strong>Kode yang dipakai:</strong><br>
+            const newList = [...oldList, newItem];
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
